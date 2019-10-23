@@ -75,6 +75,10 @@ dependencies {
     testCompile group: 'com.spotify', name: 'completable-futures', version: spotifyFuturesVersion
 }
 
+test {
+    useJUnitPlatform()
+}
+
 task jooqCodegen {
     doLast {
         def dbUrl = 'jdbc:h2:mem:jooqCodegen'
